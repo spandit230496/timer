@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Multiple Timer App</h1>
+    <audio id="timerAudio" src=" ">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="time-body">
+        <h3>Set Time :</h3>
+        <div class="time-input">
+            <div class="time">
+                <input type="number" name="hour" id="hour" placeholder="hh" autofocus>
+                <h1>:</h1>
+                <input type="number" name="minute" id="minute" placeholder="mm">
+                <h1>:</h1>
+                <input type="number" name="second" id="second" placeholder="ss">
+            </div>
+            <button id="set_time"> Set</button>
+        </div>
+    </div>
+    <div class="text" id="list-of-timers">
+        <div class="description">
+            <p>Current Timer</p>
+        </div>
+        <div id="list"></div>
+
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
