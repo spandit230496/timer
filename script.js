@@ -46,7 +46,6 @@ const startTimer = (index) => {
 
     if (time[index].remaining <= 0) {
       clearInterval(timerId);
-      time.splice(index, 1);
 
       // Update the display with the new timer list
       updateTimersDisplay();
@@ -57,10 +56,9 @@ const startTimer = (index) => {
       audioElement.play();
 
       setTimeout(() => {
-        expiredTimerDiv.innerHTML = ""; // Reset the div content
+        time.splice(index, 1);
+        updateTimersDisplay();
       }, 5000); // Remove the expired timer design change after 5 seconds (adjust as needed)
-    } else {
-      updateTimersDisplay();
     }
   }, 1000);
   time[index].timerId = timerId;
